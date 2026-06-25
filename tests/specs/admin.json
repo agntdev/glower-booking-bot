@@ -1,0 +1,24 @@
+[
+  {
+    "name": "non-admin /admin is rejected with a plain-language message",
+    "steps": [
+      {
+        "send": { "text": "/admin", "userId": 1 },
+        "expect": [
+          { "method": "sendMessage" }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "non-admin admin-menu callback shows an alert",
+    "steps": [
+      {
+        "send": { "callback": "ad:m", "userId": 1 },
+        "expect": [
+          { "method": "answerCallbackQuery", "payload": { "show_alert": true } }
+        ]
+      }
+    ]
+  }
+]

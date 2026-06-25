@@ -1,0 +1,35 @@
+[
+  {
+    "name": "tapping Book service lists available services",
+    "steps": [
+      {
+        "send": { "callback": "svc:l" },
+        "expect": [
+          { "method": "editMessageText" }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "tapping a service shows its details with action buttons",
+    "steps": [
+      {
+        "send": { "callback": "svc:p:1" },
+        "expect": [
+          { "method": "editMessageReplyMarkup" }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "tapping an unknown service id is handled gracefully",
+    "steps": [
+      {
+        "send": { "callback": "svc:p:999" },
+        "expect": [
+          { "method": "editMessageText" }
+        ]
+      }
+    ]
+  }
+]

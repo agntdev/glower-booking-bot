@@ -1,0 +1,11 @@
+[
+  {
+    "name": "tapping Contact shows the studio contact info",
+    "steps": [
+      {
+        "send": { "callback": "ct:v" },
+        "expect": [{ "method": "editMessageText" }]
+      }
+    ]
+  }
+]
