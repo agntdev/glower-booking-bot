@@ -1,0 +1,13 @@
+[
+  {
+    "name": "/admin is restricted to admin users",
+    "steps": [
+      {
+        "send": { "text": "/admin" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "Admin access required." } }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "portfolio:view shows filter options",
+    "steps": [
+      {
+        "send": { "callback": "portfolio:view" },
+        "expect": [
+          { "method": "answerCallbackQuery" },
+          { "method": "editMessageText", "payload": { "text": "🖼 *GlowEr Portfolio*\n\nBrowse our work. Filter by service:" } }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "portfolio:show_all shows empty state",
+    "steps": [
+      {
+        "send": { "callback": "portfolio:show_all" },
+        "expect": [
+          { "method": "answerCallbackQuery" },
+          { "method": "editMessageText", "payload": { "text": "No portfolio items yet — check back soon!" } }
+        ]
+      }
+    ]
+  }
+]
