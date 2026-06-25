@@ -1,0 +1,14 @@
+[
+  {
+    "name": "contact:start shows contact info",
+    "steps": [
+      {
+        "send": { "callback": "contact:start" },
+        "expect": [
+          { "method": "answerCallbackQuery" },
+          { "method": "editMessageText", "payload": { "text": "📞 *Contact GlowEr*\n\n📍 123 Beauty Lane, Suite 101\n📞 +1 (555) 123-4567\n✉️ hello@glower-studio.com\n\n🕐 Mon–Sat: 9:00 AM – 6:00 PM\n🕐 Sun: Closed\n\nSend us a message below:" } }
+        ]
+      }
+    ]
+  }
+]

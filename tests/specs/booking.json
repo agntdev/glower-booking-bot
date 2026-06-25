@@ -1,0 +1,26 @@
+[
+  {
+    "name": "booking:start shows available services",
+    "steps": [
+      {
+        "send": { "callback": "booking:start" },
+        "expect": [
+          { "method": "answerCallbackQuery" },
+          { "method": "editMessageText", "payload": { "text": "📅 Pick a service to book:" } }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "booking:select_service shows calendar",
+    "steps": [
+      {
+        "send": { "callback": "booking:service:svc_1" },
+        "expect": [
+          { "method": "answerCallbackQuery" },
+          { "method": "editMessageText" }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "bookings:view shows empty state",
+    "steps": [
+      {
+        "send": { "callback": "bookings:view" },
+        "expect": [
+          { "method": "answerCallbackQuery" },
+          { "method": "editMessageText", "payload": { "text": "No bookings yet — tap 📅 Book service to get started!" } }
+        ]
+      }
+    ]
+  }
+]

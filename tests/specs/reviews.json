@@ -1,0 +1,38 @@
+[
+  {
+    "name": "reviews:view shows empty state",
+    "steps": [
+      {
+        "send": { "callback": "reviews:view" },
+        "expect": [
+          { "method": "answerCallbackQuery" },
+          { "method": "editMessageText", "payload": { "text": "No reviews yet — be the first to share your experience!" } }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "reviews:submit starts review flow",
+    "steps": [
+      {
+        "send": { "callback": "reviews:submit" },
+        "expect": [
+          { "method": "answerCallbackQuery" },
+          { "method": "editMessageText", "payload": { "text": "✍️ *Leave a Review*\n\nWrite your review (text only, no photos required):" } }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "followup:review:skip shows thanks",
+    "steps": [
+      {
+        "send": { "callback": "followup:review:skip" },
+        "expect": [
+          { "method": "answerCallbackQuery" },
+          { "method": "editMessageText", "payload": { "text": "Thanks for visiting GlowEr! See you again soon." } }
+        ]
+      }
+    ]
+  }
+]
