@@ -1,0 +1,20 @@
+[
+  {
+    "name": "tapping Portfolio shows the portfolio view (empty state allowed)",
+    "steps": [
+      {
+        "send": { "callback": "pf:v" },
+        "expect": [{ "method": "editMessageText" }]
+      }
+    ]
+  },
+  {
+    "name": "filtering by a service shows the filtered portfolio view",
+    "steps": [
+      {
+        "send": { "callback": "pf:f:1" },
+        "expect": [{ "method": "answerCallbackQuery" }]
+      }
+    ]
+  }
+]

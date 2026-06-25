@@ -1,0 +1,20 @@
+[
+  {
+    "name": "tapping Reviews shows the reviews list (empty state allowed)",
+    "steps": [
+      {
+        "send": { "callback": "rv:v" },
+        "expect": [{ "method": "editMessageText" }]
+      }
+    ]
+  },
+  {
+    "name": "tapping Leave a review starts the review flow",
+    "steps": [
+      {
+        "send": { "callback": "rv:s" },
+        "expect": [{ "method": "editMessageText" }]
+      }
+    ]
+  }
+]

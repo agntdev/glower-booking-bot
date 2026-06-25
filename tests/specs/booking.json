@@ -1,0 +1,47 @@
+[
+  {
+    "name": "tapping Book this on a service shows the date picker",
+    "steps": [
+      {
+        "send": { "callback": "bk:s:1" },
+        "expect": [{ "method": "editMessageText" }]
+      }
+    ]
+  },
+  {
+    "name": "picking a date shows the time slot picker",
+    "steps": [
+      {
+        "send": { "callback": "bk:d:1:2099-12-29" },
+        "expect": [{ "method": "editMessageText" }]
+      }
+    ]
+  },
+  {
+    "name": "picking a time slot shows the confirm prompt",
+    "steps": [
+      {
+        "send": { "callback": "bk:t:1:4102444800000" },
+        "expect": [{ "method": "editMessageText" }]
+      }
+    ]
+  },
+  {
+    "name": "confirming a slot creates the booking and replies",
+    "steps": [
+      {
+        "send": { "callback": "bk:c:1:4102444800000" },
+        "expect": [{ "method": "editMessageText" }]
+      }
+    ]
+  },
+  {
+    "name": "tapping Add notes prompts the user to type a note",
+    "steps": [
+      {
+        "send": { "callback": "bk:n:1:4102444800000" },
+        "expect": [{ "method": "editMessageText" }]
+      }
+    ]
+  }
+]

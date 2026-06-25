@@ -1,0 +1,11 @@
+[
+  {
+    "name": "tapping My bookings shows the bookings list (empty state allowed)",
+    "steps": [
+      {
+        "send": { "callback": "mb:l" },
+        "expect": [{ "method": "editMessageText" }]
+      }
+    ]
+  }
+]
